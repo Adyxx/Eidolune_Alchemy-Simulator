@@ -10,7 +10,7 @@ export class NodeFactory {
   static createIngredientNode(options: {
     label: string;
     emoji?: string;
-    ingredientBase?: Partial<Ingredient>; // now optional
+    ingredientBase?: Partial<Ingredient>;
     x: number;
     y: number;
     onIngredientAmountChange?: (id: string, amount: number) => void;

@@ -20,7 +20,7 @@ export type MatterBehavior =
   | "solid";
 
 export interface IngredientComposition {
-  liquidPhase: number; // free/continuous liquid fraction
+  liquidPhase: number;
   dissolvedSolids: number;
   undissolvedSolids: number;
 }
@@ -74,7 +74,7 @@ export interface Ingredient {
   // ⚙️ NUMERICAL PROPERTIES
   properties: Record<string, number>; // sweetness, acidity, etc.
 
-  // 🔥 THERMAL BEHAVIOR (replaces reactivity.heat)
+  // 🔥 THERMAL BEHAVIOR
   thermal: {
     conductivity: number; // how fast it matches environment
     capacity: number;     // resistance to change (later use)
@@ -93,7 +93,7 @@ export interface Ingredient {
   sourceDetails?: SourceDetail[];
   sourceContributions?: Record<string, number>;
 
-    // ⬅ optional internal simulation memory
+    // optional internal simulation memory
   _heatMemory?: {
     timeAboveThresholds: Record<number, number>;
     burnerTemperature?: number;

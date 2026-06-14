@@ -276,7 +276,7 @@ function determineMixedState(
     return "plasma";
   }
 
-  // Gas dominates (lighter than solids/liquids)
+  // Gas dominates
   if (uniqueStates.includes("gas")) {
     return "gas";
   }
