@@ -84,9 +84,9 @@ export function liquidTraits(result: Ingredient) {
   const traits: string[] = [];
 
   if (result.properties.sweetness !== undefined) {
-    if (result.properties.sweetness > 80) traits.push("Very sweet");
-    else if (result.properties.sweetness > 50) traits.push("Mild sweetness");
-    else if (result.properties.sweetness > 20) traits.push("Slight sweetness");
+    if (result.properties.sweetness > 50) traits.push("Very sweet");
+    else if (result.properties.sweetness > 20) traits.push("Mild sweetness");
+    else if (result.properties.sweetness > 5) traits.push("Slight sweetness");
     else traits.push("Not sweet");
   }
 
